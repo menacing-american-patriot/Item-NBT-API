@@ -26,17 +26,15 @@ public class GameprofileUtil {
     private static Method GET_PROPERTIES = null;
     
     static {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                GET_NAME = GameProfile.class.getDeclaredMethod("name");
-                GET_ID = GameProfile.class.getDeclaredMethod("id");
-                GET_VALUE = com.mojang.authlib.properties.Property.class.getDeclaredMethod("value");
-                GET_SIGNATURE = com.mojang.authlib.properties.Property.class.getDeclaredMethod("signature");
-                GET_PROPERTY_NAME = com.mojang.authlib.properties.Property.class.getDeclaredMethod("name");
-                GET_PROPERTIES = GameProfile.class.getDeclaredMethod("properties");
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
-            }
+        try {
+            GET_NAME = GameProfile.class.getDeclaredMethod("name");
+            GET_ID = GameProfile.class.getDeclaredMethod("id");
+            GET_VALUE = com.mojang.authlib.properties.Property.class.getDeclaredMethod("value");
+            GET_SIGNATURE = com.mojang.authlib.properties.Property.class.getDeclaredMethod("signature");
+            GET_PROPERTY_NAME = com.mojang.authlib.properties.Property.class.getDeclaredMethod("name");
+            GET_PROPERTIES = GameProfile.class.getDeclaredMethod("properties");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
         }
     }
     
@@ -137,74 +135,50 @@ public class GameprofileUtil {
     }
     
     private static String getName(GameProfile profile) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return GET_NAME.invoke(profile).toString();
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get GameProfile name via reflection", e);
-            }
-        } else {
-            return profile.getName();
+        try {
+            return GET_NAME.invoke(profile).toString();
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get GameProfile name via reflection", e);
         }
     }
     
     private static UUID getId(GameProfile profile) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return (UUID) GET_ID.invoke(profile);
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get GameProfile id via reflection", e);
-            }
-        } else {
-            return profile.getId();
+        try {
+            return (UUID) GET_ID.invoke(profile);
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get GameProfile id via reflection", e);
         }
     }
     
     private static String getValue(com.mojang.authlib.properties.Property property) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return GET_VALUE.invoke(property).toString();
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get Property value via reflection", e);
-            }
-        } else {
-            return property.getValue();
+        try {
+            return GET_VALUE.invoke(property).toString();
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get Property value via reflection", e);
         }
     }
     
     private static String getSignature(com.mojang.authlib.properties.Property property) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return GET_SIGNATURE.invoke(property).toString();
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get Property signature via reflection", e);
-            }
-        } else {
-            return property.getSignature();
+        try {
+            return GET_SIGNATURE.invoke(property).toString();
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get Property signature via reflection", e);
         }
     }
     
     private static String getPropertyName(com.mojang.authlib.properties.Property property) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return GET_PROPERTY_NAME.invoke(property).toString();
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get Property name via reflection", e);
-            }
-        } else {
-            return property.getName();
+        try {
+            return GET_PROPERTY_NAME.invoke(property).toString();
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get Property name via reflection", e);
         }
     }
     
     private static PropertyMap getProperties(GameProfile profile) {
-        if(MinecraftVersion.isAtLeastVersion(MinecraftVersion.MC1_21_R6)) {
-            try {
-                return (PropertyMap) GET_PROPERTIES.invoke(profile);
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                throw new NbtApiException("Failed to get GameProfile properties via reflection", e);
-            }
-        } else {
-            return profile.getProperties();
+        try {
+            return (PropertyMap) GET_PROPERTIES.invoke(profile);
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            throw new NbtApiException("Failed to get GameProfile properties via reflection", e);
         }
     }
 
