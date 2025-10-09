@@ -142,7 +142,7 @@ Using this method the API gets copied into your plugin. Server owners don't have
         <configuration>
           <relocations>
             <relocation>
-              <pattern>de.tr7zw.changeme.nbtapi</pattern>
+              <pattern>org.jeffstein.nbtapi</pattern>
               <shadedPattern>YOUR PACKGE WHERE THE API SHOULD END UP</shadedPattern>
             </relocation>
           </relocations>

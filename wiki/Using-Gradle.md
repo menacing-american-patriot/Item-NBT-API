@@ -92,7 +92,7 @@ After this you can add the shadowJar configuration to relocate the API package:
 
 ```groovy
 shadowJar {
-    relocate("de.tr7zw.changeme.nbtapi", "YOUR PACKAGE WHERE THE API SHOULD END UP")
+    relocate("org.jeffstein.nbtapi", "YOUR PACKAGE WHERE THE API SHOULD END UP")
 }
 ```
 

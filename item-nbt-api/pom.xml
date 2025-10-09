@@ -43,7 +43,7 @@
 	        <relocations>
 	          <relocation>
 	            <pattern>org.bstats</pattern>
-	            <shadedPattern>de.tr7zw.changeme.nbtapi.utils.metrics</shadedPattern>
+	            <shadedPattern>org.jeffstein.nbtapi.utils.metrics</shadedPattern>
 	          </relocation>
 	        </relocations>
           <createDependencyReducedPom>true</createDependencyReducedPom>

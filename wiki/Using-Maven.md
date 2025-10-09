@@ -83,7 +83,7 @@ Add the plugin to the build configuration, as shown here:
      <configuration>
        <relocations>
          <relocation>
-           <pattern>de.tr7zw.changeme.nbtapi</pattern>
+           <pattern>org.jeffstein.nbtapi</pattern>
            <shadedPattern>YOUR PACKAGE WHERE THE API SHOULD END UP</shadedPattern>
          </relocation>
        </relocations>
@@ -98,7 +98,7 @@ Replace ``YOUR PACKAGE WHERE THE API SHOULD END UP`` with your own unique packag
 
 ```xml
 <relocation>
-  <pattern>de.tr7zw.changeme.nbtapi</pattern>
+  <pattern>org.jeffstein.nbtapi</pattern>
   <shadedPattern>com.yourname.pluginname.nbtapi</shadedPattern>
 </relocation>
 ```
