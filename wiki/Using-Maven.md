@@ -25,7 +25,7 @@ Add the following entries to your pom at the correct locations:
 
 ```xml
 <dependency>
-  <groupId>de.tr7zw</groupId>
+  <groupId>org.jeffstein</groupId>
   <artifactId>item-nbt-api-plugin</artifactId>
   <version>VERSION</version>
   <scope>provided</scope>
@@ -120,7 +120,7 @@ Then, add NBT-API to your dependencies by including the following entries to you
 
 ```xml
 <dependency>
-  <groupId>de.tr7zw</groupId>
+  <groupId>org.jeffstein</groupId>
   <artifactId>item-nbt-api</artifactId>
   <version>VERSION</version>
 </dependency>
@@ -146,4 +146,3 @@ public void onEnable() {
     // Load other things
 }
 ```
-

@@ -1,4 +1,4 @@
-package de.tr7zw.nbtinjector;
+package org.jeffstein.nbtinjector;
 
 import org.jeffstein.nbtapi.NBTCompound;
 

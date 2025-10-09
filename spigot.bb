@@ -110,7 +110,7 @@ The API can be used in different ways:
 Just use the Plugin as Maven dependency and remember to add "NBTAPI" as dependency into the plugin.yml. This way server owners will have to install the api and keep it updated.
 [CODE]
 <dependency>
-  <groupId>de.tr7zw</groupId>
+  <groupId>org.jeffstein</groupId>
   <artifactId>item-nbt-api-plugin</artifactId>
   <version>2.15.3-SNAPSHOT</version>
 </dependency>
@@ -120,7 +120,7 @@ Just use the Plugin as Maven dependency and remember to add "NBTAPI" as dependen
 Using this method the API gets copied into your plugin. Server owners don't have to install the API on their own, but you need to keep it updated. Also [B]relocating is required[/B]!
 [CODE]
 <dependency>
-  <groupId>de.tr7zw</groupId>
+  <groupId>org.jeffstein</groupId>
   <artifactId>item-nbt-api</artifactId>
   <version>2.15.3-SNAPSHOT</version>
 </dependency>

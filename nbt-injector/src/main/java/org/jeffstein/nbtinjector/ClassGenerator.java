@@ -1,4 +1,4 @@
-package de.tr7zw.nbtinjector;
+package org.jeffstein.nbtinjector;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -32,7 +32,7 @@ public class ClassGenerator {
 
     }
 
-    private static final String GENERATOR_PACKAGE = "de.tr7zw.nbtinjector.generated";
+    private static final String GENERATOR_PACKAGE = "org.jeffstein.nbtinjector.generated";
 
     /**
      * Wrappes a given class with the INBTWrapper interface
@@ -51,7 +51,7 @@ public class ClassGenerator {
             String readMethod, String extraDataKey) throws NotFoundException, CannotCompileException, IOException {
         classPool.insertClassPath(new LoaderClassPath(ClassGenerator.class.getClassLoader()));
 
-        CtClass generated = classPool.makeClass("de.tr7zw.nbtinjector.generated." + originalClass.getSimpleName());
+        CtClass generated = classPool.makeClass("org.jeffstein.nbtinjector.generated." + originalClass.getSimpleName());
 
         CtClass wrapperInterface = classPool.get(INBTWrapper.class.getName());
         generated.setInterfaces(new CtClass[] { wrapperInterface });

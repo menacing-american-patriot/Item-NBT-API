@@ -22,7 +22,7 @@ repositories {
 ```
 
 ```groovy
-compileOnly("de.tr7zw:item-nbt-api-plugin:VERSION")
+compileOnly("org.jeffstein:item-nbt-api-plugin:VERSION")
 ```
 
 (Get the current ``VERSION`` from [here](https://modrinth.com/plugin/nbtapi/versions))
@@ -80,7 +80,7 @@ repositories {
 ```
 
 ```groovy
-implementation("de.tr7zw:item-nbt-api:VERSION")
+implementation("org.jeffstein:item-nbt-api:VERSION")
 ```
 
 (Get the current ``VERSION`` from [here](https://modrinth.com/plugin/nbtapi/versions))
@@ -119,4 +119,3 @@ public void onEnable() {
     // Load other things
 }
 ```
-

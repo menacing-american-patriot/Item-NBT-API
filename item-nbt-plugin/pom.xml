@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>de.tr7zw</groupId>
+    <groupId>org.jeffstein</groupId>
     <artifactId>item-nbt-parent</artifactId>
     <version>2.15.3-SNAPSHOT</version>
   </parent>
@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
-      <groupId>de.tr7zw</groupId>
+      <groupId>org.jeffstein</groupId>
       <artifactId>item-nbt-api</artifactId>
       <version>2.15.3-SNAPSHOT</version>
       <scope>compile</scope>
@@ -68,7 +68,7 @@
       </plugin>
       <!-- Start and Stop a SpigotMC server automatically before and after the integration-test phase. -->
       <plugin>
-        <groupId>de.tr7zw.spigotmc.maven</groupId>
+        <groupId>org.jeffstein.spigotmc.maven</groupId>
         <artifactId>tr-spigotmc-maven-plugin</artifactId>
         <version>0.0.3-SNAPSHOT</version>
         <configuration>
@@ -79,7 +79,7 @@
           https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.10.2-R0.1-SNAPSHOT/spigot-1.10.2-R0.1-20190527.154910-2.jar,
           https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.11.2-R0.1-SNAPSHOT/spigot-1.11.2-R0.1-20191216.091129-1.jar,
           https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.12.2-R0.1-SNAPSHOT/spigot-1.12.2-R0.1-20190527.155359-34.jar,
-                        <!--https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.13.2-R0.1-SNAPSHOT/spigot-1.13.2-R0.1-20191113.201242-53.jar,-->
+                                                <!--https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.13.2-R0.1-SNAPSHOT/spigot-1.13.2-R0.1-20191113.201242-53.jar,-->
             https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.14.4-R0.1-SNAPSHOT/spigot-1.14.4-R0.1-20191224.232152-15.jar,
           https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.15.2-R0.1-SNAPSHOT/spigot-1.15.2-R0.1-20200625.172449-18.jar,
           https://repo.codemc.io/repository/nms/org/spigotmc/spigot/1.16.5-R0.1-SNAPSHOT/spigot-1.16.5-R0.1-20210611.090701-17.jar
