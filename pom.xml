@@ -33,12 +33,7 @@
       <version>1.21.10-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.jeffstein.spigotmc.maven</groupId>
-      <artifactId>tr-spigotmc-maven-plugin</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-      <scope>provided</scope>
-    </dependency>
+
     <dependency>
       <groupId>com.mojang</groupId>
       <artifactId>authlib</artifactId>

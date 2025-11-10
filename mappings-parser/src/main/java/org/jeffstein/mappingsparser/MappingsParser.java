@@ -1,4 +1,4 @@
-package dev.tr7zw.mappingsparser;
+package org.jeffstein.mappingsparser;
 
 import java.io.File;
 import java.io.IOException;
